@@ -1,0 +1,36 @@
+[
+   {
+      "id":1,
+      "type": "FillQuestion",
+      "question":"How are you?",
+      "correctAns":"1"
+   },
+   {
+      "id":2,
+      "type": "FillQuestion",
+      "question":"What's your name?",
+      "correctAns":"1"
+   },
+   {
+      "id":2,
+      "type": "FillQuestion",
+      "question":"What's your name?",
+      "correctAns":"1"
+   },
+   {
+      "id":2,
+      "type": "FillQuestion",
+      "question":"What's your name?",
+      "correctAns":"1"
+   },
+   {
+      "id":3,
+      "type": "MultipleQuestion",
+      "question":"What's your name?",
+      "correctAns":"1",
+      "answer1":"fine",
+      "answer2":"so so",
+      "answer3":"not bad",
+      "answer4":"ok"
+   }
+]
