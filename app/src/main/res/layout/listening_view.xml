@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/questions"
+                android:layout_width="wrap_content"
+                android:layout_weight="3"
+                android:id="@+id/question"
+                android:text="@string/question_one" />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/ic_media_play"
+                android:id="@+id/btnPlay"
+                android:layout_gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+        <!-- Answers for question one. -->
+        <RadioGroup
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/answer_1"
+                style="@style/answers"
+                android:text="@string/q1_answer_a" />
+
+
+            <RadioButton
+                android:id="@+id/answer_2"
+                style="@style/answers"
+                android:text="@string/q1_answer_b" />
+
+            <RadioButton
+                android:id="@+id/answer_3"
+                style="@style/answers"
+                android:text="@string/q1_answer_c" />
+            <RadioButton
+                android:id="@+id/answer_4"
+                style="@style/answers"
+                android:text="talking" />
+
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

@@ -1,5 +1,7 @@
 package com.example.englishquiz;
 
+import android.content.Context;
+import android.media.MediaPlayer;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -83,7 +85,7 @@ public class Question {
         this.correctAns = correctIns;
     }
 
-    public static ArrayList<Question> Deserialize(String jsonFileString) throws JSONException {
+    public static ArrayList<Question> Deserialize(Context context, String jsonFileString) throws JSONException {
         ArrayList<Question> listQuestion = new ArrayList<>();
         Log.i("data", jsonFileString);
         JSONArray array = new JSONArray(jsonFileString);
@@ -113,6 +115,25 @@ public class Question {
                         question.getString("correctAns")
                 )));
             }
+            else if (question.getString("type").equals("Listening")) {
+                Log.d("question", "Deserialize: Add Listening");
+
+                listQuestion.add((new Listening(question.getInt("id"),
+                        question.getString("type"),
+                        question.getString("question"),
+                        question.getString("correctAns"),
+                        MediaPlayer.create(context,context.getResources().getIdentifier(question.getString("track"),
+                                "raw", context.getPackageName())),
+                        question.getString("answer1"),
+                        question.getString("answer2"),
+                        question.getString("answer3"),
+                        question.getString("answer4")
+
+
+                )));
+            }
+
+
 
         }
         return listQuestion;
